@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ayush Arya - Portfolio</title>
+
+  <!-- Make sure this filename matches your actual CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">&lt;ayush.dev/&gt;</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="bg-gradient"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        Available for work
+                    </div>
+                    <h1>
+                        Hi, I'm <span class="name">Ayush Arya</span>
+                    </h1>
+                    <p class="subtitle">Software Engineer | Full Stack & AI Developer</p>
+                    <p class="hero-description">
+                        I build intelligent, scalaable applications by blending data-driven development with clean, efficient code. Passionate
+                        about AI, automation, and full-stack solutions that turn ideas into  impactful digital products.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">About Me</div>
+                    <h2 class="section-title">Engineering Intelligent Solutions</h2>
+                    <p class="section-subtitle">
+                        Building scalable web and AI-powered applications that combine 
+                        performance, innovation, and real-world impacts.
+                    </p>
+                </div>
+                <div class="about-grid">
+                    <div>
+                        <div class="about-text">
+                            <p>
+                                Hello! I'm Ayush, a passionate software engineer and full-stack developer from India.
+                                I specialize in building intelligent, scalable web and AI-powered applications that 
+                                bridge innovation with real-world impact.
+                            </p>
+                            <p>
+                                My journey began with curiosity about how technology solves everyday problems, leading 
+                                me to explore full-stack development and machine learning. Over time, I've worked on 
+                                projects like AGRIPRED, AutoXperio, and CloudCast — each sharpening my skills in AI 
+                                integration, backend logic, and clean UI design.
+                            </p>
+                            <p>
+                                When I'm not coding, you'll find me exploring new technologies, contributing to 
+                                open-source projects, or sharing knowledge with the developer community.
+                            </p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1+</div>
+                                <div class="stat-label">Years Exp</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">90%</div>
+                                <div class="stat-label">Success Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-container">
+                        <h3 style="color: #ffffff; margin-bottom: 2rem; font-size: 1.5rem; font-weight: 600;">Tech Stack</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card"><div class="skill-name">React.js</div></div>
+                            <div class="skill-card"><div class="skill-name">JavaScript</div></div>
+                            <div class="skill-card"><div class="skill-name">Node.js</div></div>
+                            <div class="skill-card"><div class="skill-name">Java</div></div>
+                            <div class="skill-card"><div class="skill-name">Python</div></div>
+                            <div class="skill-card"><div class="skill-name">SQL</div></div>
+                            <div class="skill-card"><div class="skill-name">MongoDB</div></div>
+                            <div class="skill-card"><div class="skill-name">AWS</div></div>
+                            <div class="skill-card"><div class="skill-name">AI/ML</div></div>
+                            <div class="skill-card"><div class="skill-name">Git</div></div>
+                            <div class="skill-card"><div class="skill-name">REST API</div></div>
+                            <div class="skill-card"><div class="skill-name">Pytorch</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Featured Work</div>
+                    <h2 class="section-title">Selected Projects</h2>
+                    <p class="section-subtitle">
+                        A showcase of my recent work across web development and design
+                    </p>
+                </div>
+                <div class="project-grid">
+                    <div class="project-card reveal">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">AgriPred : Rice Leaf Disease Detection</h3>
+                                <div class="project-type">Full Stack Application + Machine Learning</div>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            A web-based application that identifies 10 types of rice leaf diseases using a CNN model (ResNet50). 
+                            Features include image upload, AI-powered disease detection, and curated treatment recommendations. 
+                            Built a Flask API backend integrated with a React frontend for real-time predictions.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://agripred.onrender.com/" class="project-link">Live Demo</a>
+                            <a href="https://github.com/Healreaper2004/AGRIPRED" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">AutoXperio : Garage Management System</h3>
+                                <div class="project-type">Full Stack Application</div>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                                A dynamic garage management system for automotive service centers, allowing 
+                                real-time booking, billing, inventory management, and role-based access. 
+                                Integrated Node.js backend with MongoDB for efficient data handling, 
+                                Used Flask for easy deployment, and hosted on Render.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Render</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://autoxperio.onrender.com/" class="project-link">Live Demo</a>
+                            <a href="https://github.com/Healreaper2004/AutoXperio" class="project-link">Case Study</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">CloudCast : Weather Forecast Application</h3>
+                                <div class="project-type">Full Stack Application + API Integertion</div>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            A responsive weather forecast dashboard providing hyper-local forecasts, AQI information, 
+                            and real-time updates using OpenWeatherMap APIs. Features dynamic visualizations, 
+                            hourly & daily forecasts, and a dark/light mode interface. Built with React frontend, 
+                            FastAPI backend, and Python-based data processing modules.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://healreaper2004.github.io/CloudCast/" class="project-link">Live Demo</a>
+                            <a href="https://github.com/Healreaper2004/CloudCast" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume">
+        <div class="container">
+            <div class="section-header">
+            <h2 class="section-title">Resume</h2>
+            <p class="section-subtitle">Download my resume or view it online</p>
+            </div>
+            <div class="resume-actions">
+            <a href="assets/Ayush_Resume.pdf" download class="btn btn-primary">⬇ Download Resume</a>
+            <a href="assets/Ayush_Resume.pdf" target="_blank" class="btn btn-secondary">👁 View Online</a>
+            </div>
+            <div class="resume-preview">
+            <iframe src="assets/Ayush_Resume.pdf" frameborder="0"></iframe>
+            </div>
+        </div>
+        </section>
+
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="certificates">
+        <div class="container">
+            <div class="section-header">
+            <h2 class="section-title">Certificates & Achievements</h2>
+            <p class="section-subtitle">
+                Professional certifications and achievements that validate my expertise
+            </p>
+            </div>
+            <div class="certificate-grid">
+            
+            <!-- Certificate Card 1: Microsoft Azure AI Fundamentals -->
+            <div class="certificate-card">
+                <img src="assets/cert-azure-ai.jpg" alt="Microsoft Azure AI Fundamentals">
+                <div class="certificate-info">
+                <h3>Microsoft Azure AI Fundamentals</h3>
+                <p>Microsoft • 2024</p>
+                <p class="highlight">Score: 904 / 1000</p>
+                <a href="assets/cert-azure-ai.jpg" target="_blank" class="btn btn-secondary">
+                    Verify Certificate
+                </a>
+                </div>
+            </div>
+
+            <!-- Certificate Card 2: C-DAC Internship -->
+            <div class="certificate-card">
+                <img src="assets/cert-cdac.jpg" alt="C-DAC Internship Certificate">
+                <div class="certificate-info">
+                <h3>AI & Data Science Internship</h3>
+                <p>C-DAC Patna • 2024</p>
+                <p class="highlight">Grade: A</p>
+                <a href="assets/cert-cdac.jpg" target="_blank" class="btn btn-secondary">
+                    Verify Certificate
+                </a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+        <!-- ===== Get In Touch ===== -->
+        <section id="contact" class="section contact">
+            <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">
+                Let's connect and discuss opportunities, collaborations, or just have a chat about technology
+            </p>
+            </div>
+        <div class="contact-grid">
+            <!-- Left Column: Contact Form -->
+            <form id="contactForm" class="contact-form">
+                <label>Send me a message</label>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+                <p id="formStatus" class="form-status"></p>
+            </form>
+
+            <!-- Right Column: Info Boxes -->
+            <div class="contact-right">
+                <div class="contact-info-box">
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> <br> <a href="mailto:ayush.arya.11062004@gmail.com">ayush.arya.11062004@gmail.com</a></p>
+                <p><strong>Location:</strong> <br> Patna | Vellore</p>
+                </div>
+
+                <div class="contact-cta-box">
+                <h4>Let's work together!</h4>
+                <p>I'm always open to discussing new opportunities, interesting <br> projects, or just connecting with fellow developers. <br>Feel free to reach out!</p>
+                </div>
+            </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-text">© <span id="year"></span> Ayush Arya — All rights reserved.</div>
+            <div class="social-links">
+                <a class="social-link" href="https://github.com/Healreaper2004" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="social-link" href="https://linkedin.com/in/ayush-arya-9b3406255" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="social-link" href="https://www.instagram.com/_aayush11._.arya/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
