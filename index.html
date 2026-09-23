@@ -1,330 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ayush Arya - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ayush Arya — Computer Science Engineer, Software Developer and AI/ML enthusiast.">
+  <meta name="author" content="Ayush Arya">
+  <meta name="theme-color" content="#080b14">
+  <title>Ayush Arya | Software Engineer</title>
 
-  <!-- Make sure this filename matches your actual CSS file -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">&lt;ayush.dev/&gt;</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu" id="mobileMenu" aria-label="Toggle menu" role="button" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a class="logo" href="#home">&lt;ayush.dev/&gt;</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#certificates">Certifications</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a class="nav-resume" href="assets/Ayush_Resume.pdf" target="_blank" rel="noopener">
+        <i class="fa-regular fa-file-lines"></i> Resume
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-grid"></div>
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <div class="availability"><span></span> Open to software engineering opportunities</div>
+          <p class="eyebrow">COMPUTER SCIENCE ENGINEER</p>
+           <p class="hero-role">Software Engineer | Backend Developer | Full Stack Developer | AI/ML</p>
+          <h1>Building <span>useful software</span> with code, AI &amp; automation.</h1>
+          <p class="hero-text">
+            I'm Ayush Arya, a Computer Science Engineering graduate from VIT with hands-on experience
+            in Python, full-stack development, REST APIs, AI/ML and backend engineering.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore Projects <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn btn-ghost" href="assets/Ayush_Resume.pdf" target="_blank" rel="noopener">
+              <i class="fa-regular fa-file-lines"></i> View Resume
+            </a>
+          </div>
+          <div class="quick-links">
+            <a href="https://github.com/Healreaper2004" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/ayush-arya-9b3406255" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:ayush.arya.11062004@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a>
+          </div>
         </div>
-    </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="bg-gradient"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        Available for work
-                    </div>
-                    <h1>
-                        Hi, I'm <span class="name">Ayush Arya</span>
-                    </h1>
-                    <p class="subtitle">Software Engineer | Full Stack & AI Developer</p>
-                    <p class="hero-description">
-                        I build intelligent, scalaable applications by blending data-driven development with clean, efficient code. Passionate
-                        about AI, automation, and full-stack solutions that turn ideas into  impactful digital products.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">About Me</div>
-                    <h2 class="section-title">Engineering Intelligent Solutions</h2>
-                    <p class="section-subtitle">
-                        Building scalable web and AI-powered applications that combine 
-                        performance, innovation, and real-world impacts.
-                    </p>
-                </div>
-                <div class="about-grid">
-                    <div>
-                        <div class="about-text">
-                            <p>
-                                Hello! I'm Ayush, a passionate software engineer and full-stack developer from India.
-                                I specialize in building intelligent, scalable web and AI-powered applications that 
-                                bridge innovation with real-world impact.
-                            </p>
-                            <p>
-                                My journey began with curiosity about how technology solves everyday problems, leading 
-                                me to explore full-stack development and machine learning. Over time, I've worked on 
-                                projects like AGRIPRED, AutoXperio, and CloudCast — each sharpening my skills in AI 
-                                integration, backend logic, and clean UI design.
-                            </p>
-                            <p>
-                                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                                open-source projects, or sharing knowledge with the developer community.
-                            </p>
-                        </div>
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">3+</div>
-                                <div class="stat-label">Projects</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">1+</div>
-                                <div class="stat-label">Years Exp</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">90%</div>
-                                <div class="stat-label">Success Rate</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills-container">
-                        <h3 style="color: #ffffff; margin-bottom: 2rem; font-size: 1.5rem; font-weight: 600;">Tech Stack</h3>
-                        <div class="skills-grid">
-                            <div class="skill-card"><div class="skill-name">React.js</div></div>
-                            <div class="skill-card"><div class="skill-name">JavaScript</div></div>
-                            <div class="skill-card"><div class="skill-name">Node.js</div></div>
-                            <div class="skill-card"><div class="skill-name">Java</div></div>
-                            <div class="skill-card"><div class="skill-name">Python</div></div>
-                            <div class="skill-card"><div class="skill-name">SQL</div></div>
-                            <div class="skill-card"><div class="skill-name">MongoDB</div></div>
-                            <div class="skill-card"><div class="skill-name">AWS</div></div>
-                            <div class="skill-card"><div class="skill-name">AI/ML</div></div>
-                            <div class="skill-card"><div class="skill-name">Git</div></div>
-                            <div class="skill-card"><div class="skill-name">REST API</div></div>
-                            <div class="skill-card"><div class="skill-name">Pytorch</div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">Featured Work</div>
-                    <h2 class="section-title">Selected Projects</h2>
-                    <p class="section-subtitle">
-                        A showcase of my recent work across web development and design
-                    </p>
-                </div>
-                <div class="project-grid">
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <div>
-                                <h3 class="project-title">AgriPred : Rice Leaf Disease Detection</h3>
-                                <div class="project-type">Full Stack Application + Machine Learning</div>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            A web-based application that identifies 10 types of rice leaf diseases using a CNN model (ResNet50). 
-                            Features include image upload, AI-powered disease detection, and curated treatment recommendations. 
-                            Built a Flask API backend integrated with a React frontend for real-time predictions.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://agripred.onrender.com/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Healreaper2004/AGRIPRED" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <div>
-                                <h3 class="project-title">AutoXperio : Garage Management System</h3>
-                                <div class="project-type">Full Stack Application</div>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                                A dynamic garage management system for automotive service centers, allowing 
-                                real-time booking, billing, inventory management, and role-based access. 
-                                Integrated Node.js backend with MongoDB for efficient data handling, 
-                                Used Flask for easy deployment, and hosted on Render.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">Render</span>
-                            <span class="tech-tag">AWS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://autoxperio.onrender.com/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Healreaper2004/AutoXperio" class="project-link">Case Study</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card reveal">
-                        <div class="project-header">
-                            <div>
-                                <h3 class="project-title">CloudCast : Weather Forecast Application</h3>
-                                <div class="project-type">Full Stack Application + API Integertion</div>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            A responsive weather forecast dashboard providing hyper-local forecasts, AQI information, 
-                            and real-time updates using OpenWeatherMap APIs. Features dynamic visualizations, 
-                            hourly & daily forecasts, and a dark/light mode interface. Built with React frontend, 
-                            FastAPI backend, and Python-based data processing modules.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">FastAPI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://healreaper2004.github.io/CloudCast/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Healreaper2004/CloudCast" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resume Section -->
-        <section id="resume" class="resume">
-        <div class="container">
-            <div class="section-header">
-            <h2 class="section-title">Resume</h2>
-            <p class="section-subtitle">Download my resume or view it online</p>
-            </div>
-            <div class="resume-actions">
-            <a href="assets/Ayush_Resume.pdf" download class="btn btn-primary">⬇ Download Resume</a>
-            <a href="assets/Ayush_Resume.pdf" target="_blank" class="btn btn-secondary">👁 View Online</a>
-            </div>
-            <div class="resume-preview">
-            <iframe src="assets/Ayush_Resume.pdf" frameborder="0"></iframe>
-            </div>
+        <div class="hero-panel reveal delay-1">
+          <div class="terminal-top">
+            <div class="terminal-dots"><span></span><span></span><span></span></div>
+            <span>ayush@dev ~ portfolio</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="code-purple">const</span> developer = {</p>
+            <p class="indent"><span class="code-blue">name</span>: <span class="code-green">'Ayush Arya'</span>,</p>
+            <p class="indent"><span class="code-blue">degree</span>: <span class="code-green">'B.Tech CSE'</span>,</p>
+            <p class="indent"><span class="code-blue">graduation</span>: <span class="code-green">'2026'</span>,</p>
+            <p class="indent"><span class="code-blue">cgpa</span>: <span class="code-orange">8.44</span>,</p>
+            <p class="indent"><span class="code-blue">focus</span>: [</p>
+            <p class="indent2"><span class="code-green">'Software Engineering'</span>,</p>
+            <p class="indent2"><span class="code-green">'AI / ML'</span>,</p>
+            <p class="indent2"><span class="code-green">'Backend &amp; APIs'</span>,</p>
+             <p class="indent2"><span class="code-green">'AI Engineer'</span></p>
+            <p class="indent">]</p>
+            <p>};</p>
+            <p class="terminal-cursor"><span></span> Building the next thing...</p>
+          </div>
         </div>
-        </section>
+      </div>
+      <a class="scroll-hint" href="#about"><span></span> Scroll to explore</a>
+    </section>
 
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">01 · ABOUT</span>
+          <h2>From ideas to <span>working products.</span></h2>
+          <p>My focus sits at the intersection of software engineering, intelligent systems and practical product development.</p>
+        </div>
 
-        <!-- Certificates Section -->
-        <section id="certificates" class="certificates">
-        <div class="container">
-            <div class="section-header">
-            <h2 class="section-title">Certificates & Achievements</h2>
-            <p class="section-subtitle">
-                Professional certifications and achievements that validate my expertise
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              Computer Science Engineering graduate from VIT Vellore with hands-on experience in Software Engineering, Backend Development, Full-Stack Development, and AI/ML solutions. Proficient in Java, Python, JavaScript, Spring Boot, React.js, Node.js, Express.js, MongoDB, and MySQL, with experience building REST APIs and backend services.
             </p>
-            </div>
-            <div class="certificate-grid">
-            
-            <!-- Certificate Card 1: Microsoft Azure AI Fundamentals -->
-            <div class="certificate-card">
-                <img src="assets/cert-azure-ai.jpg" alt="Microsoft Azure AI Fundamentals">
-                <div class="certificate-info">
-                <h3>Microsoft Azure AI Fundamentals</h3>
-                <p>Microsoft • 2024</p>
-                <p class="highlight">Score: 904 / 1000</p>
-                <a href="assets/cert-azure-ai.jpg" target="_blank" class="btn btn-secondary">
-                    Verify Certificate
-                </a>
-                </div>
-            </div>
-
-            <!-- Certificate Card 2: C-DAC Internship -->
-            <div class="certificate-card">
-                <img src="assets/cert-cdac.jpg" alt="C-DAC Internship Certificate">
-                <div class="certificate-info">
-                <h3>AI & Data Science Internship</h3>
-                <p>C-DAC Patna • 2024</p>
-                <p class="highlight">Grade: A</p>
-                <a href="assets/cert-cdac.jpg" target="_blank" class="btn btn-secondary">
-                    Verify Certificate
-                </a>
-                </div>
-            </div>
-
-            </div>
-        </div>
-        </section>
-
-        <!-- ===== Get In Touch ===== -->
-        <section id="contact" class="section contact">
-            <div class="section-header">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">
-                Let's connect and discuss opportunities, collaborations, or just have a chat about technology
+            <p>
+              Completed AI &amp; Data Science training at C-DAC Patna and developed an IEEE-published rice disease classification system and an AI-powered Code Review Assistant. Strong foundation in Data Structures &amp; Algorithms, OOP, DBMS, Operating Systems, Software Engineering, REST APIs, and Machine Learning.
             </p>
-            </div>
-        <div class="contact-grid">
-            <!-- Left Column: Contact Form -->
-            <form id="contactForm" class="contact-form">
-                <label>Send me a message</label>
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-                <p id="formStatus" class="form-status"></p>
-            </form>
 
-            <!-- Right Column: Info Boxes -->
-            <div class="contact-right">
-                <div class="contact-info-box">
-                <h3>Contact Information</h3>
-                <p><strong>Email:</strong> <br> <a href="mailto:ayush.arya.11062004@gmail.com">ayush.arya.11062004@gmail.com</a></p>
-                <p><strong>Location:</strong> <br> Patna | Vellore</p>
-                </div>
-
-                <div class="contact-cta-box">
-                <h4>Let's work together!</h4>
-                <p>I'm always open to discussing new opportunities, interesting <br> projects, or just connecting with fellow developers. <br>Feel free to reach out!</p>
-                </div>
+            <div class="stats">
+              <div class="stat"><strong>8.44</strong><span>CGPA · VIT</span></div>
+              <div class="stat"><strong>2026</strong><span>Graduation</span></div>
+              <div class="stat"><strong>5+</strong><span>Projects</span></div>
             </div>
-            </div>
+          </div>
 
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-text">© <span id="year"></span> Ayush Arya — All rights reserved.</div>
-            <div class="social-links">
-                <a class="social-link" href="https://github.com/Healreaper2004" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a class="social-link" href="https://linkedin.com/in/ayush-arya-9b3406255" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a class="social-link" href="https://www.instagram.com/_aayush11._.arya/" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
+          <div class="about-cards reveal delay-1">
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-code"></i></div>
+              <div><h3>Software Engineering</h3><p>Java, Python, JavaScript, REST APIs, OOP, DSA and backend development.</p></div>
             </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-brain"></i></div>
+              <div><h3>AI &amp; Machine Learning</h3><p>Model development, preprocessing, evaluation and AI-powered application integration.</p></div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <div><h3>Full-Stack Development</h3><p>React, Node.js, Express, MongoDB and responsive web interfaces.</p></div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <div><h3>Engineering Workflow</h3><p>Git/GitHub, testing, debugging, CI/CD, performance optimization and deployment.</p></div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">02 · EXPERIENCE</span>
+          <h2>Experience &amp; <span>training.</span></h2>
+          <p>Hands-on engineering and applied machine-learning experience.</p>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><i class="fa-solid fa-server"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <p class="timeline-date">JUNE 2026 — SEPTEMBER 2026</p>
+                  <h3>Backend Development Intern</h3>
+                  <p class="company">PrimeTrade AI · Remote</p>
+                </div>
+                <span class="timeline-tag">Internship</span>
+              </div>
+              <ul>
+                <li>Engineered backend services in Python for an AI-powered financial trading platform, using asynchronous processing for real-time market data.</li>
+                <li>Designed and shipped 10 production-grade REST APIs and automated backend workflows to reduce manual intervention.</li>
+                <li>Worked on testing, debugging and CI/CD workflows with Redis, Linux and GitHub Actions.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><i class="fa-solid fa-microchip"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <p class="timeline-date">JUNE 2025 — JULY 2025</p>
+                  <h3>AI &amp; Data Science Trainee</h3>
+                  <p class="company">C-DAC Patna</p>
+                </div>
+                <span class="timeline-tag">Training cum Internship</span>
+              </div>
+              <ul>
+                <li>Worked on supervised and unsupervised machine-learning workflows using Python, Scikit-learn, Pandas and NumPy.</li>
+                <li>Applied preprocessing, feature engineering and evaluation techniques to improve model performance.</li>
+                <li>Completed the training cum internship with Grade A certification.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal delay-1">
+            <div class="timeline-marker"><i class="fa-solid fa-people-group"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <p class="timeline-date">2023 — 2024</p>
+                  <h3>Core Committee Member</h3>
+                  <p class="company">Standards Club · BIS, Government of India</p>
+                </div>
+                <span class="timeline-tag">Leadership</span>
+              </div>
+              <ul>
+                <li>Supported organization of BIS workshops and student-facing activities focused on quality standards.</li>
+                <li>Helped engage 50+ students through standards-awareness initiatives.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">03 · PROJECTS</span>
+          <h2>Selected <span>work.</span></h2>
+          <p>Projects across AI/ML, full-stack engineering, developer tooling and APIs.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured reveal">
+            <div class="project-top"><span class="project-number">01</span><span class="project-label">AI / ML · PUBLISHED</span></div>
+            <h3>AgriPred</h3>
+            <p class="project-subtitle">Rice Disease Classification &amp; Advisory System</p>
+            <p>Deep learning-based rice disease classification system trained on 10,000+ images across 10 disease categories, with a Flask REST backend and crop-health advisory workflow.</p>
+            <div class="project-metrics"><span><strong>10K+</strong> images</span><span><strong>10</strong> disease classes</span><span><strong>96.46%</strong> validation accuracy</span></div>
+            <div class="tags"><span>Python</span><span>TensorFlow</span><span>Deep Learning</span><span>Flask</span><span>MongoDB</span><span>Pandas</span><span>NumPy</span></div>
+            <div class="project-actions">
+              <a href="https://agripred.onrender.com/" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/Healreaper2004/AGRIPRED" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+              <a href="https://ieeexplore.ieee.org/document/11543435" target="_blank" rel="noopener">IEEE Publication <i class="fa-solid fa-book-open"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-1">
+            <div class="project-top"><span class="project-number">02</span><span class="project-label">FULL STACK</span></div>
+            <h3>AutoXperio</h3>
+            <p class="project-subtitle">Garage Management System</p>
+            <p>Full-stack platform for automotive service centers covering bookings, billing, inventory management and role-based access.</p>
+            <div class="project-metrics"><span><strong>50+</strong> test bookings</span><span><strong>RBAC</strong> dashboards</span></div>
+            <div class="tags"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>JavaScript</span><span>REST APIs</span></div>
+            <div class="project-actions">
+              <a href="https://autoxperio.onrender.com/" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/Healreaper2004/AutoXperio" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top"><span class="project-number">03</span><span class="project-label">AI DEVELOPER TOOL</span></div>
+            <h3>Code Review Assistant</h3>
+            <p class="project-subtitle">AI-Powered Code Analysis</p>
+            <p>Full-stack AI application using Google Gemini API to analyze code quality, software performance and security across multiple programming languages.</p>
+            <div class="tags"><span>React.js</span><span>Tailwind CSS</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Gemini API</span></div>
+            <div class="project-actions">
+              <a href="https://code-review-assistant-3ihw.onrender.com" target="_blank" rel="noopener">Live App <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/Healreaper2004/Code-Review-Assistant" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-1">
+            <div class="project-top"><span class="project-number">04</span><span class="project-label">WEB / API</span></div>
+            <h3>CloudCast</h3>
+            <p class="project-subtitle">Weather Forecast Application</p>
+            <p>Responsive weather application providing location-aware forecasts and real-time weather information through API integration.</p>
+            <div class="tags"><span>React.js</span><span>JavaScript</span><span>Tailwind CSS</span><span>REST APIs</span><span>OpenWeatherMap</span></div>
+            <div class="project-actions">
+              <a href="https://healreaper2004.github.io/CloudCast/" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/Healreaper2004/CloudCast" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top"><span class="project-number">05</span><span class="project-label">AI / AGRITECH</span></div>
+            <h3>FarmWisely</h3>
+            <p class="project-subtitle">Smart Agriculture Decision Support</p>
+            <p>Machine-learning and case-based reasoning system for yield prediction and personalized crop, fertilizer and irrigation recommendations using structured farm data.</p>
+            <div class="tags"><span>Python</span><span>Flask</span><span>Machine Learning</span><span>Scikit-learn</span><span>Pandas</span><span>MongoDB</span></div>
+            <div class="project-actions">
+              <a href="https://farmwisely-ffox.onrender.com" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/Healreaper2004/FarmWisely" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">04 · SKILLS</span>
+          <h2>Tools I <span>work with.</span></h2>
+          <p>A practical toolkit built through projects, coursework and hands-on development.</p>
+        </div>
+
+        <div class="skills-layout">
+          <div class="skill-group reveal">
+            <div class="skill-group-head"><i class="fa-solid fa-terminal"></i><h3>Programming &amp; AI</h3></div>
+            <div class="skill-list"><span>Python</span><span>Java</span><span>TensorFlow</span><span>Deep Learning</span><span>Machine Learning</span><span>Pandas</span><span>NumPy</span><span>SQL</span></div>
+          </div>
+          <div class="skill-group reveal delay-1">
+            <div class="skill-group-head"><i class="fa-solid fa-globe"></i><h3>Web &amp; Backend</h3></div>
+            <div class="skill-list"><span>Flask</span><span>React.js</span><span>JavaScript</span><span>Node.js</span><span>Express.js</span><span>Spring Boot</span><span>Tailwind CSS</span><span>REST APIs</span><span>HTML</span><span>CSS</span></div>
+          </div>
+          <div class="skill-group reveal delay-2">
+            <div class="skill-group-head"><i class="fa-solid fa-database"></i><h3>Data &amp; AI APIs</h3></div>
+            <div class="skill-list"><span>MongoDB</span><span>MySQL</span><span>Google Gemini API</span></div>
+          </div>
+          <div class="skill-group reveal">
+            <div class="skill-group-head"><i class="fa-solid fa-book-open"></i><h3>Coursework</h3></div>
+            <div class="skill-list"><span>OOP</span><span>DSA</span><span>DBMS</span><span>Operating Systems</span><span>SDLC</span></div>
+          </div>
+          <div class="skill-group reveal delay-1">
+            <div class="skill-group-head"><i class="fa-solid fa-gears"></i><h3>Engineering Tools</h3></div>
+            <div class="skill-list"><span>Git</span><span>GitHub</span><span>CI/CD</span><span>Web Development</span><span>MS Office</span></div>
+          </div>
+        </div>
+
+        <div class="education-card reveal">
+          <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div>
+            <p class="timeline-date">SEPTEMBER 2022 — JUNE 2026</p>
+            <h3>Vellore Institute of Technology</h3>
+            <p>B.Tech. · Computer Science &amp; Engineering</p>
+          </div>
+          <div class="education-score"><strong>8.44</strong><span>CGPA</span></div>
+        </div>
+        <div class="education-card reveal">
+          <div class="education-icon"><i class="fa-solid fa-school"></i></div>
+          <div>
+            <p class="timeline-date">2022 · DELHI PUBLIC SCHOOL · PATNA</p>
+            <h3>Senior Secondary Education</h3>
+            <p>12th · PCM + Computer Science</p>
+          </div>
+          <div class="education-score"><strong>81.4%</strong><span>12th</span></div>
+        </div>
+        <div class="education-card reveal delay-1">
+          <div class="education-icon"><i class="fa-solid fa-school"></i></div>
+          <div>
+            <p class="timeline-date">2020 · DELHI PUBLIC SCHOOL · PATNA</p>
+            <h3>Secondary Education</h3>
+            <p>10th · General</p>
+          </div>
+          <div class="education-score"><strong>82.8%</strong><span>10th</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section section-alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-kicker">05 · CREDENTIALS</span>
+          <h2>Certifications &amp; <span>achievements.</span></h2>
+          <p>Selected credentials from Microsoft, Oracle, C-DAC and Udemy.</p>
+        </div>
+
+        <div class="cert-grid">
+          <article class="cert-card reveal">
+            <div class="cert-image"><img src="assets/cert-azure-ai.jpg" alt="Microsoft Azure AI Fundamentals certificate"></div>
+            <div class="cert-content"><span class="cert-org">MICROSOFT · AI-900</span><h3>Azure AI Fundamentals</h3><p>Microsoft certification covering foundational AI, machine learning, computer vision, NLP and Azure AI services.</p><strong>Score: 904 / 1000 · Issued: 22 July 2024</strong><strong>Credential ID: bEJA-H9uQ</strong><a href="assets/cert-azure-ai.jpg" target="_blank" rel="noopener">View certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
+
+          <article class="cert-card reveal delay-1">
+            <div class="cert-image"><img src="assets/cert-cdac.jpg" alt="C-DAC AI and Data Science internship certificate"></div>
+            <div class="cert-content"><span class="cert-org">C-DAC PATNA · 2025</span><h3>AI &amp; Data Science Internship</h3><p>Training cum internship in AI &amp; Data Science using Python.</p><strong>Grade: A</strong><a href="assets/cert-cdac.jpg" target="_blank" rel="noopener">View certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-image"><img src="assets/cert-udemy-springboot.jpg" alt="Udemy Spring Boot 4, Spring 7 and Hibernate certificate"></div>
+            <div class="cert-content"><span class="cert-org">UDEMY · 2026</span><h3>Spring Boot 4, Spring 7 &amp; Hibernate for Beginners</h3><p>35.5-hour course covering Spring Boot, Spring Framework and Hibernate fundamentals.</p><strong>Completed: July 13, 2026</strong><a href="assets/cert-udemy-springboot.jpg" target="_blank" rel="noopener">View certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
+
+          <article class="cert-card reveal delay-1">
+            <div class="cert-image"><img src="assets/cert-oracle.png" alt="Oracle Certified Foundations Associate certificate"></div>
+            <div class="cert-content"><span class="cert-org">ORACLE · 2026</span><h3>OCI 2025 Certified Foundations Associate</h3><p>Oracle Cloud Infrastructure foundations certification.</p><strong>Valid: Feb 2026 — Feb 2028</strong><a href="assets/cert-oracle.png" target="_blank" rel="noopener">View certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-box reveal">
+          <div class="contact-copy">
+            <span class="section-kicker">06 · CONTACT</span>
+            <h2>Let's build something <span>useful.</span></h2>
+            <p>I'm open to software engineering, backend, full-stack, AI/ML and related early-career opportunities. Have an opportunity or a project in mind? Let's connect.</p>
+            <div class="contact-details">
+              <a href="mailto:ayush.arya.11062004@gmail.com"><i class="fa-regular fa-envelope"></i> ayush.arya.11062004@gmail.com</a>
+              <span><i class="fa-solid fa-location-dot"></i> India · Patna</span>
+            </div>
+            <div class="contact-socials">
+              <a href="https://github.com/Healreaper2004" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com/in/ayush-arya-9b3406255" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/_aayush11._.arya/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about the opportunity or project..." required></textarea>
+            <button class="btn btn-primary" type="submit">Open Email <i class="fa-regular fa-paper-plane"></i></button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-contact"><p>© <span id="year"></span> Ayush Arya. Built with HTML, CSS &amp; JavaScript.</p><a href="mailto:ayush.arya.11062004@gmail.com">ayush.arya.11062004@gmail.com</a></div>
+      <a href="#home">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

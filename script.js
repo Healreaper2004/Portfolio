@@ -1,97 +1,71 @@
-// simple site scripts: mobile menu, smooth scroll, reveal on scroll, contact form handler
-document.addEventListener('DOMContentLoaded', function () {
-  // year in footer
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
-  // mobile menu toggle
-  const mobileMenu = document.getElementById('mobileMenu');
-  const navLinks = document.getElementById('navLinks');
-  if (mobileMenu && navLinks) {
-    function toggleMobileMenu() {
-      mobileMenu.classList.toggle('open');
-      navLinks.classList.toggle('show');
-    }
+  const navbar = document.getElementById("navbar");
+  const progress = document.getElementById("scrollProgress");
+  const menu = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  const links = [...document.querySelectorAll(".nav-link")];
 
-    mobileMenu.addEventListener('click', toggleMobileMenu);
-    mobileMenu.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') toggleMobileMenu();
+  const updateScrollUI = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
+    navbar.classList.toggle("scrolled", window.scrollY > 20);
+  };
+  window.addEventListener("scroll", updateScrollUI, { passive: true });
+  updateScrollUI();
+
+  const closeMenu = () => {
+    navLinks.classList.remove("open");
+    menu.setAttribute("aria-expanded", "false");
+  };
+
+  menu.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    menu.setAttribute("aria-expanded", String(open));
+  });
+  links.forEach(link => link.addEventListener("click", closeMenu));
+
+  const sections = [...document.querySelectorAll("main section[id]")];
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      links.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`));
     });
+  }, { rootMargin: "-35% 0px -55% 0px", threshold: 0 });
 
-    // close when a nav link is clicked (mobile)
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (navLinks.classList.contains('show')) {
-          navLinks.classList.remove('show');
-          mobileMenu.classList.remove('open');
-        }
-      });
-    });
-  }
+  sections.forEach(section => sectionObserver.observe(section));
 
-  // Dark/Light Mode Toggle
-  const themeToggle = document.querySelector('.theme-toggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      themeToggle.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
-    });
-  }
-
-  // smooth scrolling for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.replaceState(null, '', this.getAttribute('href'));
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
       }
     });
-  });
+  }, { threshold: 0.12 });
 
-  // reveal on scroll for elements with .reveal
-  const reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && reveals.length) {
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(el => observer.observe(el));
-  } else {
-    // fallback: show all
-    reveals.forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
-  }
+  document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
-  // contact form handler
-  const form = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-  if (form && formStatus) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+  if (form && status) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
       const name = form.name.value.trim();
       const email = form.email.value.trim();
       const message = form.message.value.trim();
 
       if (!name || !email || !message) {
-        formStatus.textContent = 'Please fill out all required fields.';
-        formStatus.className = 'form-status error';
+        status.textContent = "Please complete all fields.";
         return;
       }
 
-      formStatus.textContent = 'Sending...';
-      formStatus.className = 'form-status';
-      setTimeout(() => {
-        formStatus.textContent = 'Thanks — your message has been received. I will get back to you soon!';
-        formStatus.className = 'form-status success';
-        form.reset();
-      }, 800);
+      const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      window.location.href = `mailto:ayush.arya.11062004@gmail.com?subject=${subject}&body=${body}`;
+      status.textContent = "Opening your email client…";
     });
   }
 });
